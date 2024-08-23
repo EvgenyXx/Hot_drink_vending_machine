@@ -1,9 +1,34 @@
 package vending_machine.product;
 
-public class Product {
-    private final int id;
-    private final String name;
-    private final int price;
+public  abstract  class Product {
+    private  int id;
+    private  String name;
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    private  int price;
 
     public Product(int id, String name, int price) {
         this.id = id;
@@ -11,16 +36,7 @@ public class Product {
         this.price = price;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getPrice() {
-        return price;
+    public Product() {
     }
 
     @Override
@@ -28,7 +44,6 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+                ", price=" + price ;
     }
 }
